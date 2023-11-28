@@ -38,7 +38,7 @@ public class UserServices {
         if(existingUsername != null){
             throw new IllegalArgumentException("Username already exists.");
         }
-        User existingEmail = userRepository.findByUsername(user.getEmail());
+        User existingEmail = userRepository.findByEmail(user.getEmail());
         if(existingEmail != null){
             throw new IllegalArgumentException("Email already exists.");
         }
