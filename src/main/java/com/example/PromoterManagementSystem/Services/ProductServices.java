@@ -59,7 +59,7 @@ public class ProductServices {
 
     }
 
-    public void removeShop(String productCode){
+    public void removeProduct(String productCode){
         Product existingProduct = productRepository.findById(productCode).orElse(null);
         if(existingProduct != null){
             productRepository.delete(existingProduct);

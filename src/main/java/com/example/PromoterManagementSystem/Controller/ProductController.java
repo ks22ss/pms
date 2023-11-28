@@ -57,9 +57,9 @@ public class ProductController {
     }
 
     @DeleteMapping("/{productCode}")
-    public ResponseEntity<?> deleteShop(@PathVariable String productCode) {
+    public ResponseEntity<?> deleteProduct(@PathVariable String productCode) {
         try{
-            productServices.removeShop(productCode);
+            productServices.removeProduct(productCode);
             return ResponseEntity.noContent().build();
         }catch (IllegalArgumentException e){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
